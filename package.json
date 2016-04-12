@@ -1,0 +1,41 @@
+{
+  "name": "monolytics-client",
+  "version": "0.0.1",
+  "description": "To edit ...",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ulysset/people-flow.git"
+  },
+  "author": "Léo LE BRAS <leo.lebrasf@gmail.com> (http://github.com/LeoLeBras)",
+  "license": "MIT",
+  "scripts": {
+    "start": "env BASE_DIR=public/ NODE_ENV=development webpack-dev-server --inline --hot --config webpack.config",
+    "build": "env BASE_DIR=public/ NODE_ENV=production webpack --config webpack.config"
+  },
+  "dependencies": {
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-transform-flow-strip-types": "^6.7.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "dynamics.js": "^1.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "vue": "^1.0.17",
+    "vue-hot-reload-api": "^1.3.0",
+    "vue-html-loader": "^1.1.0",
+    "vue-loader": "^8.0.3",
+    "vue-router": "^0.7.11",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-path-rewriter": "^1.1.3"
+  }
+}
