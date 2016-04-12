@@ -1,5 +1,5 @@
 # monolytics-client
- 🚀 [https://monolytics.io](https://monolytics.io)
+ 🚀 [http://monolytics.io](http://monolytics.io)
 
 ## Requirements
 - Node.js 4.x or newer
