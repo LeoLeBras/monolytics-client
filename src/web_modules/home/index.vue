@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-
+  
   <div class="video_container"> 
   <div class="video_mask">
     <div id="video_effect"></div>

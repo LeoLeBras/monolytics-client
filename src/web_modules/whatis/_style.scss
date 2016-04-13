@@ -102,7 +102,13 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 580px) {
+  .content_explanation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
     .explanation_separator {
       display: none
     }
@@ -129,4 +135,20 @@
       text-align: center;
     }
 
+  }
+
+
+  @media screen and (max-width: 1350px) {
+    
+    
+    .explanation_left img {
+      display: none;
+    }
+
+    
+    .explanation_right img {
+      display: none;
+    }
+
+    
   }

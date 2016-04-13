@@ -2,17 +2,17 @@
 	<div class="container header">
 	    <div class="gradient"></div>
 	      <div class="menu">
-	        <div class="col-4 logo">
+	        <div class="col_4 logo">
 	          <a v-link="'/home'">
 	            <img src="../assets/img/logo.png" alt="Monlythics">
 	          </a>
 	        </div>
-	        <div class="col-4 whatis">
+	        <div class="col_4 whatis">
 	          <a v-link="'/whatis'">
 	            <span class="menu_link"><span>what is</span> trurank ?</span>
 	          </a>
 	        </div>
-	        <div class="col-4 about">
+	        <div class="col_4 about">
 	          <a v-link="'/about'">
 	            <span class="menu_link">about us</span>
 	          </a>
@@ -22,9 +22,25 @@
   </div>
 </template>
 
+<script>
+
+  import Vue from 'vue';
+  import dynamics from 'dynamics.js';
+
+  
+
+
+  export default {
+    // ...
+  }
+
+</script>
+
 <style lang="sass" scoped>
 
   @import "./theme";
+
+
   
   body {
   color: $main_text_color;
@@ -40,7 +56,7 @@ a:hover {
   text-decoration: none;
 }
 
-.col-4 {
+.col_4 {
   width: 33%;
   display: inline-block;
 }
@@ -146,5 +162,30 @@ a:hover {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+@media screen and (max-width: 920px) {
+    .col_4 {
+      display: block;
+      padding: 5px 0px;
+    }
+
+    .about {
+      text-align: left;
+    }
+
+    .whatis {
+      text-align: left;
+    }
+
+    .logo {
+      text-align: left;
+    }
+
+    .logo img {
+      margin-left: 0px;
+      width: 60%;
+    }
+
+  }
 
 </style>

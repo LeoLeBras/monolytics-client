@@ -10,7 +10,7 @@
       <div class="explanation_left">
         <p>
           Noise is the combination of every social signal linked to a movie <br />
-          Comments, views and mentions were all retreived from few apis <br />
+          Comments, views and mentions were all retreived from few apis<br />
           <img src="../../assets/img/icon_left.png" alt="nos apis">
         </p>
       </div>
