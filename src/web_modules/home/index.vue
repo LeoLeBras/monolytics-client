@@ -1,7 +1,7 @@
 <template>
   <app-header></app-header>
-    <div class="home_part" transition="slide">
-      <div class="video_container" transition="translate"> 
+    <div class="home_part">
+      <div class="video_container"> 
       <div class="video_mask">
         <div id="video_effect"></div>
           <div id="video_trailers">
@@ -32,12 +32,18 @@
           <div class="mouse_roll"></div>
          </div>
        </div>
+     </div>
      
      
-       <div class="col-md-12 twitter">
-         <h2>latest mentions</h2>
+       <div class="col-md-12 twitter_slide">
          <div class="timeline_twitter">
-     
+            <ul class="text-slider">
+             <li class="text-slide"><a href="">I'm @NowWatching #TheTerminator</a></li>
+             <li class="text-slide"><a href="">I'm @NowWatching #TheTerminator</a></li>
+             <li class="text-slide"><a href="">I'm @NowWatching #TheTerminator</a></li>
+             <li class="text-slide"><a href="">I'm @NowWatching #TheTerminator</a></li>
+             <li class="text-slide"><a href="">I'm @NowWatching #TheTerminator</a></li>
+          </ul>
          </div>
        </div>
 
