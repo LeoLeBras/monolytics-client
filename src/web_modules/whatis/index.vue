@@ -10,7 +10,7 @@
       <div class="explanation_left">
         <p>
           Noise is the combination of every social signal linked to a movie <br />
-          Comments, views and mentions were all retreived from : <br />
+          Comments, views and mentions were all retreived from few apis <br />
           <img src="../../assets/img/icon_left.png" alt="nos apis">
         </p>
       </div>
@@ -20,7 +20,7 @@
        <div class="explanation_right">
         <p>
           Reality combines every after the release of the movie <br />
-          We used the numbers of streams, seeders and tickets sales from :  
+          We used the numbers of streams, seeders and tickets sales from few apis 
           <img src="../../assets/img/icon_right.png" alt="nos apis">
         </p>
       </div>

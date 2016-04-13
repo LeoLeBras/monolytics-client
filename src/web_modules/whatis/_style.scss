@@ -100,3 +100,33 @@
   font-size: 15px;
   color: $main_text_color;
 }
+
+
+@media screen and (max-width: 900px) {
+    .explanation_separator {
+      display: none
+    }
+
+    .explanation_left {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    
+    .explanation_left img {
+      display: none;
+    }
+
+    
+    .explanation_right img {
+      display: none;
+    }
+
+    .explanation_right {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
