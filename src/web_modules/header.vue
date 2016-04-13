@@ -5,7 +5,6 @@
 	        <div class="col-4 logo">
 	          <a v-link="'/home'">
 	            <img src="../assets/img/logo.png" alt="Monlythics">
-	            <span>MONOLYTICS</span>
 	          </a>
 	        </div>
 	        <div class="col-4 whatis">
@@ -79,10 +78,10 @@ a:hover {
 }
 
 .logo img {
-  width: 6%;
-  padding: 0px;
-  margin-left:10px;
-  margin-top: -8px;
+    width: 30%;
+    padding: 0px;
+    margin-left: 10px;
+    margin-top: 0px;
 }
 
 .logo span{
