@@ -1,21 +1,9 @@
 <template>
   <app-header></app-header>
-
-  <div class="video_container"> 
-  <div class="video_mask">
-    <div id="video_effect"></div>
-      <div id="video_trailers">
-        <video class="video" autoplay>
-            <source src="../src/assets/medias/trailers/one.webm" type="video/webm">
-          Your browser does not support HTML5 video.  
-        </video>
-      </div>
-  </div>
-</div>
-<div class="content whatis">
-  <h2>what is trurank</h2>
-  <h3>Noise <span>+</span> Reality</h3>
-</div>
+  <div class="container about">
+    <div class="content_about"> 
+      <h1>What is trurank ?</h1>
+      <h2>Noise <span>+</span> Reality</h2>
 </template>
 
 <script>
@@ -58,5 +46,13 @@
   @import "./style";
   
 
+
+</style>
+
+</template>
+
+<style lang="sass" scoped>
+
+  @import "../theme";
 
 </style>

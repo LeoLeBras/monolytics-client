@@ -14,6 +14,9 @@ router.map({
   },
   '/about': {
     component: require('web_modules/about')
+  },
+  '/whatis': {
+    component: require('web_modules/whatis')
   }
 });
 router.redirect({

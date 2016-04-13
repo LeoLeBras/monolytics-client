@@ -1,0 +1,14 @@
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 80%;
+}
+
+.content_about {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 40px;
+}
