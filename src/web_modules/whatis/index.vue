@@ -27,14 +27,13 @@
     </div>
   </div>
 
-    <div class="warning_whatis">
-      <p>
-        Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
-      </p>
+  <div class="warning_whatis">
+    <p>
+      Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
+    </p>
 
-      <img src="../../assets/img/stop.png" alt="Warning">
-    </div>
- 
+    <img src="../../assets/img/stop.png" alt="Warning">
+  </div>
 </template>
 
 <script>

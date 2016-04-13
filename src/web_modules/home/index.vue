@@ -1,45 +1,49 @@
 <template>
   <app-header></app-header>
-  
-  <div class="video_container"> 
-  <div class="video_mask">
-    <div id="video_effect"></div>
-      <div id="video_trailers">
-        <video class="video" autoplay loop>
-            <source src="../src/assets/medias/trailers/movies.webm" type="video/webm">
-          Your browser does not support HTML5 video.  
-        </video>
+    <div class="home_part" transition="slide">
+      <div class="video_container" transition="translate"> 
+      <div class="video_mask">
+        <div id="video_effect"></div>
+          <div id="video_trailers">
+         <!--    <video class="video" autoplay loop>
+                <source src="../src/assets/medias/trailers/movies.webm" type="video/webm">
+              Your browser does not support HTML5 video.  
+            </video> -->
+          </div>
       </div>
-  </div>
-</div>
-<div class="col-md-12 text_home">
-   <div class="catch_text">
-     We rank up the latest popular movies
-     <br />
-     with our <span class="brand_rank">trurank</span> notation system
-   </div>
+    </div>
+    <div class="col-md-12 text_home">
+       <div class="catch_text">
+         We rank up the latest popular movies
+         <br />
+         with our <span class="brand_rank">trurank</span> notation system
+       </div>
+     
+       <div class="scroll_down">
+         <div class="text_s_d">
+           scroll down
+           <br />
+           to discover the tops
+         </div>
+     
+         <div class="icone_s_d">
+          <div class="mouse"></div>
+          <div class="mouse_button"></div>
+          <div class="mouse_roll"></div>
+         </div>
+       </div>
+     
+     
+       <div class="col-md-12 twitter">
+         <h2>latest mentions</h2>
+         <div class="timeline_twitter">
+     
+         </div>
+       </div>
+
+       <nav>
+    </div>
  
-   <div class="scroll_down">
-     <div class="text_s_d">
-       scroll down
-       <br />
-       to discover the tops
-     </div>
- 
-     <div class="icone_s_d">
-      <div class="mouse"></div>
-      <div class="mouse_button"></div>
-      <div class="mouse_roll"></div>
-     </div>
-   </div>
- 
- 
-   <div class="col-md-12 twitter">
-     <h2>latest mentions</h2>
-     <div class="timeline_twitter">
- 
-     </div>
-   </div>
 </template>
 
 <script>
@@ -49,26 +53,26 @@
 
   Vue.component('app-header', require('./../header'));
 
-  Vue.transition('color', {
-    beforeLeave: () => { // beforeLeave: function() {
-      console.log('before leave');
-    },
-    leave: (el, done) => {
-      dynamics.animate(el, {
-        scale: 0,
-        opacity: 0
-      }, {
-        type: dynamics.spring,
-        frequency: 200,
-        friction: 200,
-        duration: 1500,
-        complete: () => done()
-      });
-    },
-    afterLeave: () => {
-      console.log('after leave');
-    }
-  });
+  Vue.transition('slide', {
+     beforeLeave: () => { // beforeLeave: function() {
+       console.log('before leave');
+     },
+     leave: (el, done) => {
+       dynamics.animate(el, {
+         left: 0,
+         opacity: 0
+       }, {
+         type: dynamics.spring,
+         frequency: 200,
+         friction: 200,
+         duration: 1500,
+         complete: () => done()
+       });
+     },
+     afterLeave: () => {
+       console.log('after leave');
+     }
+   });
 
   export default {
     // ...

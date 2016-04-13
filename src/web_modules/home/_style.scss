@@ -253,6 +253,26 @@ z-index: -1;
   animation: roll 2s linear infinite alternate;
 }
 
+.slide-transition {
+    transition: all 5s ease-in-out;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.slide-enter, .slide-leave {
+    transition: all 5s ease-in-out;
+    height: 0;
+    opacity: 0;
+}
+
+.top_week {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: -10vw;
+  top: 64vh;
+  background-color: blue;
+}
+
 @keyframes roll {
   0% {
     transform: translateY(0);
@@ -291,6 +311,4 @@ z-index: -1;
     -o-mask-position: 0 0;
     mask-position: 0 0;
   }
-
-
 }
