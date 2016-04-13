@@ -10,6 +10,11 @@
 
 <style lang="sass">
 
+	body {
+		overflow: hidden;
+	}
+
+
   @import "./reset";
   @font-face {
 	font-family: 'AdelleBold';
@@ -17,6 +22,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 	@font-face {
 	font-family: 'AdelleRegular';

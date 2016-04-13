@@ -9,7 +9,7 @@
     <div class="content_explanation">
       <div class="explanation_left">
         <p>
-          Noise is the combination of every social signal linked to a movie. <br />
+          Noise is the combination of every social signal linked to a movie <br />
           Comments, views and mentions were all retreived from : <br />
           <img src="../../assets/img/icon_left.png" alt="nos apis">
         </p>
@@ -24,6 +24,15 @@
           <img src="../../assets/img/icon_right.png" alt="nos apis">
         </p>
       </div>
+    </div>
+  </div>
+
+    <div class="warning_whatis">
+      <p>
+        Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
+      </p>
+
+      <img src="../../assets/img/stop.png" alt="Warning">
     </div>
  
 </template>
