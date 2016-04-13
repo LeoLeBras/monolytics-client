@@ -26,8 +26,10 @@
        to discover the tops
      </div>
  
-     <div class="icone_s_d bounce">
-       <img src="../../assets/img/mouse.png" alt="scroll down to discover the tops">
+     <div class="icone_s_d">
+      <div class="mouse"></div>
+      <div class="mouse_button"></div>
+      <div class="mouse_roll"></div>
      </div>
    </div>
  

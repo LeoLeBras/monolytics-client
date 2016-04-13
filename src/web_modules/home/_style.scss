@@ -220,24 +220,46 @@ z-index: -1;
   color: $main_text_color
 }
 
-.bounce {
-  -moz-animation: bounce 2s linear infinite alternate;
-  -webkit-animation: bounce 2s linear infinite alternate;
-  animation: bounce 2s linear infinite alternate;
+.icone_s_d {
+  position: relative;
+  left: 48%;
 }
 
-@keyframes bounce {
+.mouse {
+  position: absolute;
+  top: 0px;
+  width: 35px;
+  height: 55px;
+  border: 1px solid $main_text_color;
+  border-radius: 50px;
+}
+
+.mouse_button {
+  position: absolute;
+  top: 10px;
+  left: 17px;
+  width: 1px;
+  height: 25px;
+  background-color: $main_text_color;
+}
+
+.mouse_roll {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 5px;
+  height: 5px;
+  background-color: $main_text_color;
+  border-radius: 50%;
+  animation: roll 2s linear infinite alternate;
+}
+
+@keyframes roll {
   0% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   100% {
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
 }
   
