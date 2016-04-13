@@ -17,6 +17,15 @@ router.map({
   },
   '/whatis': {
     component: require('web_modules/whatis')
+  },
+  '/rank': {
+    component: require('web_modules/rank')
+  },
+  '/weekly': {
+    component: require('web_modules/weekly')
+  },
+  '/monthly': {
+    component: require('web_modules/monthly')
   }
 });
 router.redirect({

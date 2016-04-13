@@ -1,0 +1,149 @@
+.about {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 80%;
+}
+
+.content_about {
+  text-align: center;
+}
+
+.content_about h1{
+  text-transform: uppercase;
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 40px;
+  color: $main_text_color;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  padding-bottom: 25px;
+}
+
+.content_about h2 {
+  font-family: 'Nick', sans-serif;
+  font-size: 55px;
+  color: $main_text_color;
+  word-spacing: 12px;
+}
+
+.content_about h2 span {
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 50px;
+}
+
+.content_explanation {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  left: -1px;
+}
+
+.explanation_left {
+  font-family: 'AdelleLight', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  position: relative;
+  width: 49%;
+  display: inline-block;
+  text-align: right;
+  color: $main_text_color;
+  padding: 0px 60px;
+}
+
+.explanation_left p img {
+  padding-top: 10px;
+}
+
+.explanation_separator {
+  position: relative;
+  display: inline-block;
+  top: 30px;
+  width: 1px;
+  height: 200px;
+  background-color: $main_text_color;
+}
+
+.explanation_right {
+  font-family: 'AdelleLight', sans-serif;
+  font-size: 20px;
+  position: relative;
+  line-height: 25px;
+  width: 49%;
+  display: inline-block;
+  text-align: left;
+  color: $main_text_color;
+  padding: 0px 60px;
+}
+
+.explanation_right p img {
+  padding-top: 10px;
+}
+
+.warning_whatis {
+  text-align: center;
+  position: absolute;
+  bottom: -1vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.warning_whatis p {
+  font-family: 'AdelleRegular', sans-serif;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 5vh;
+  line-height: 20px;
+  font-size: 15px;
+  color: $main_text_color;
+}
+
+
+@media screen and (max-width: 580px) {
+  .content_explanation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    .explanation_separator {
+      display: none
+    }
+
+    .explanation_left {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    
+    .explanation_left img {
+      display: none;
+    }
+
+    
+    .explanation_right img {
+      display: none;
+    }
+
+    .explanation_right {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+
+  @media screen and (max-width: 1350px) {
+    .explanation_left img {
+      display: none;
+    }
+
+    .explanation_right img {
+      display: none;
+    }
+  }
