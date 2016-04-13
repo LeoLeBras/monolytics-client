@@ -1,39 +1,66 @@
 <template>
   <app-header></app-header>
-  <div class="container about">
-    <div class="content_about"> 
-      <h1>What is trurank ?</h1>
-      <h2>Noise <span>+</span> Reality</h2>
-    </div>
-
-    <div class="content_explanation">
-      <div class="explanation_left">
-        <p>
-          Noise is the combination of every social signal linked to a movie <br />
-          Comments, views and mentions were all retreived from few apis<br />
-          <img src="../../assets/img/icon_left.png" alt="nos apis">
-        </p>
+    <div class="content_weekly_top">
+      <div class="video_weekly_top">
+        <video class="video" autoplay loop>
+          <source src="../src/assets/medias/trailers/movies.webm" type="video/webm">
+          Your browser does not support HTML5 video.  
+        </video>
+        <div class="overlay_video_top"></div>
       </div>
 
-      <div class="explanation_separator"></div>
+      <div class="stats_weekly_top">
+        <div class="title_weekly_top">
+          <span>
+            Weekly <br />
+            Top
+          </span>
+        </div>
 
-       <div class="explanation_right">
-        <p>
-          Reality combines every after the release of the movie <br />
-          We used the numbers of streams, seeders and tickets sales from few apis 
-          <img src="../../assets/img/icon_right.png" alt="nos apis">
-        </p>
+        <div class="number_weekly_top">
+          01
+        </div>
+
+        <div class="evo_weekly_top">
+          <span class="evo_up_form"></span><span class="evo_up_text"> +1</span>
+        </div>
+
+        <div class="comments_weekly_top">
+          <span class="number_comments">7540</span>
+          <br />
+          Comments on IMDB
+        </div>
+
+        <div class="trurank_weekly_top">
+          <span class="good_stat"></span>
+          <div class="trurank_info">
+            <span>
+              Trurank <br />
+              445
+            </span>
+          </div>
+        </div>
+
+        <div class="movie_weekly_top">
+          Star wars VII : The force awakens
+        </div>
+
+        <div class="separator_stats"></div>
+
+        <div class="noise_weekly_top">
+          <span>noise</span>
+          <span class="noise_value"></span>
+        </div>
+      
+
+        <div class="reality_weekly_top">
+          <span>reality</span>
+          <span class="reality_value"></span>
+        </div>
+
+
       </div>
-    </div>
-  </div>
 
-  <div class="warning_whatis">
-    <p>
-      Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
-    </p>
-
-    <img src="../../assets/img/stop.png" alt="Warning">
-  </div>
 </template>
 
 <script>
@@ -80,9 +107,3 @@
 </style>
 
 </template>
-
-<style lang="sass" scoped>
-
-  @import "../theme";
-
-</style>
