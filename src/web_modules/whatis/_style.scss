@@ -37,19 +37,23 @@
   margin: 0 auto;
   padding-top: 20px;
   position: relative;
-  left: 37px;
+  left: -1px;
 }
 
 .explanation_left {
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'AdelleLight', sans-serif;
   font-size: 20px;
-  line-height: 25px;
+  line-height: 30px;
   position: relative;
-  width: 45%;
+  width: 49%;
   display: inline-block;
   text-align: right;
   color: $main_text_color;
-  padding: 0px 20px;
+  padding: 0px 60px;
+}
+
+.explanation_left p img {
+  padding-top: 10px;
 }
 
 .explanation_separator {
@@ -57,18 +61,22 @@
   display: inline-block;
   top: 30px;
   width: 1px;
-  height: 150px;
+  height: 220px;
   background-color: $main_text_color;
 }
 
 .explanation_right {
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'AdelleLight', sans-serif;
   font-size: 20px;
   position: relative;
-  line-height: 25px;
-  width: 45%;
+  line-height: 30px;
+  width: 49%;
   display: inline-block;
   text-align: left;
   color: $main_text_color;
-  padding: 0px 20px;
+  padding: 0px 60px;
+}
+
+.explanation_right p img {
+  padding-top: 10px;
 }

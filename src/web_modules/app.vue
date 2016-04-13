@@ -26,6 +26,13 @@
 	}
 
 	@font-face {
+	font-family: 'AdelleLight';
+	src: url('../assets/fonts/adelle/adelle_light.ttf');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+	@font-face {
 	font-family: 'Nick';
 	src: url('../assets/fonts/nickainley/Nickainley.ttf');
 	font-weight: normal;
