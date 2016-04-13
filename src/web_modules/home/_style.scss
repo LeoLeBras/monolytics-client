@@ -12,7 +12,7 @@ a:hover {
   text-decoration: none;
 }
 
-.col-4 {
+.col_4 {
   width: 33%;
   display: inline-block;
 }
@@ -158,7 +158,7 @@ z-index: -1;
     top: 0;
     -webkit-mask: url("../../assets/img/effect.png");
     -webkit-mask-size: 3000% 100%;
-    -webkit-animation: mask-playzero 4s steps(29) alternate;
+    -webkit-animation: mask-playzero 12s steps(29) infinite;
     animation-delay: 5s;
     -webkit-animation-fill-mode: forwards; 
     animation-fill-mode: forwards;
@@ -240,37 +240,36 @@ z-index: -1;
     transform: translateY(10px);
   }
 }
-
-@-webkit-keyframes mask-playzero {
-    from {
-    -webkit-mask-position: 0 0;
-    -ms-mask-position: 0 0;
-    -moz-mask-position: 0 0;
-    -o-mask-position: 0 0;
-    mask-position: 0 0;
-}
-to {
-    -webkit-mask-position: 100% 0;
-    -ms-mask-position: 100% 0;
-    -moz-mask-position: 100% 0;
-    -o-mask-position: 100% 0;
-    mask-position: 100% 0;
-}
-}
   
 @keyframes mask-playzero {
-    from {
+    0% {
     -webkit-mask-position: 0 0;
     -ms-mask-position: 0 0;
     -moz-mask-position: 0 0;
     -o-mask-position: 0 0;
     mask-position: 0 0;
   }
-  to {
+  12.5% {
     -webkit-mask-position: 100% 0;
     -ms-mask-position: 100% 0;
     -moz-mask-position: 100% 0;
     -o-mask-position: 100% 0;
     mask-position: 100% 0;
   }
+  25% {
+    -webkit-mask-position: 0 0;
+    -ms-mask-position: 0 0;
+    -moz-mask-position: 0 0;
+    -o-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 0 0;
+    -ms-mask-position: 0 0;
+    -moz-mask-position: 0 0;
+    -o-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+
 }

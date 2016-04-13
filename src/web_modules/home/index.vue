@@ -5,7 +5,7 @@
   <div class="video_mask">
     <div id="video_effect"></div>
       <div id="video_trailers">
-        <video class="video" autoplay>
+        <video class="video" autoplay loop>
             <source src="../src/assets/medias/trailers/one.webm" type="video/webm">
           Your browser does not support HTML5 video.  
         </video>
