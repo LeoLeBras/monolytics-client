@@ -81,7 +81,7 @@ a:hover {
     width: 30%;
     padding: 0px;
     margin-left: 10px;
-    margin-top: 0px;
+    margin-top: 0px; 
 }
 
 .logo span{
