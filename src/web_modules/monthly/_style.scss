@@ -303,23 +303,6 @@
   color: $main_text_color;
 }
 
-.arrow {
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: $main_text_color;
-  transform: rotate(35deg);
-}
-
-.arrow:after {
-  content:'';
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: $main_text_color;
-  transform: rotate(-35deg);
-}
-
 @keyframes roll {
   0% {
     transform: translateY(0);
