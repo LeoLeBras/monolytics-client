@@ -1,6 +1,6 @@
 <template>
   <div class="container about">
-    <h1 class="title">About</h1>
+    <h1 class="title">Hello</h1>
     <a class="back" v-link="'/home'">Back</a>
   </div>
 </template>
