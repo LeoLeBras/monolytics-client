@@ -17,7 +17,7 @@ Just [clone](github-windows://openRepo/https://github.com/LeoLeBras/monolytics-c
 and start :
 ```shell
 $ git clone https://github.com/LeoLeBras/monolytics-client.git
-$ cd people-flow
+$ cd monolytics-client
 $ npm i                         # Install Node.js components listed in ./package.json
 ```
 
