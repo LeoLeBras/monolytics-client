@@ -158,8 +158,7 @@ z-index: -1;
     top: 0;
     -webkit-mask: url("../../assets/img/effect.png");
     -webkit-mask-size: 3000% 100%;
-    -webkit-animation: mask-playzero 12s steps(29) infinite;
-    animation-delay: 5s;
+    -webkit-animation: mask-playzero 7.5s steps(29) infinite;
     -webkit-animation-fill-mode: forwards; 
     animation-fill-mode: forwards;
 }
@@ -271,14 +270,14 @@ z-index: -1;
     -o-mask-position: 0 0;
     mask-position: 0 0;
   }
-  12.5% {
+  20% {
     -webkit-mask-position: 100% 0;
     -ms-mask-position: 100% 0;
     -moz-mask-position: 100% 0;
     -o-mask-position: 100% 0;
     mask-position: 100% 0;
   }
-  25% {
+  40% {
     -webkit-mask-position: 0 0;
     -ms-mask-position: 0 0;
     -moz-mask-position: 0 0;

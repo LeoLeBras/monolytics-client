@@ -6,7 +6,7 @@
     <div id="video_effect"></div>
       <div id="video_trailers">
         <video class="video" autoplay loop>
-            <source src="../src/assets/medias/trailers/one.webm" type="video/webm">
+            <source src="../src/assets/medias/trailers/movies.webm" type="video/webm">
           Your browser does not support HTML5 video.  
         </video>
       </div>
