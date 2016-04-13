@@ -59,8 +59,27 @@
           <span>reality</span>
           <span class="reality_value"></span>
         </div>
+      </div>
+
+      <div class="scroll_weekly_top">
+         <div class="text_s_d">
+           scroll for
+           <br />
+          monthly top
+         </div>
+     
+         <div class="icone_s_d">
+          <div class="mouse"></div>
+          <div class="mouse_button"></div>
+          <div class="mouse_roll"></div>
+         </div>
+      </div>
 
 
+      <div class="next_top">
+        <span>
+          02 >
+        </span>
       </div>
 
 </template>

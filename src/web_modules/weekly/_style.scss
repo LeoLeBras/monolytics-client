@@ -11,7 +11,7 @@
   background: -webkit-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
   background: -o-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
   background: linear-gradient(to top right, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  opacity: 0.4;
+  opacity: 0.6;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -194,7 +194,6 @@
   text-transform: uppercase;
   font-family: 'AdelleBold', sans-serif;
   font-size: 20px;
-  letter-spcing: 4px;
   color: $main_text_color;
 }
 
@@ -223,11 +222,110 @@
 .reality_weekly_top {
   position: absolute;
   top: 350px;
-  right: 340px;
+  right: 325px;
   text-transform: uppercase;
   font-family: 'AdelleBold', sans-serif;
   font-size: 20px;
-  letter-spcing: 4px;
   color: $main_text_color;
+}
+
+.scroll_weekly_top {
+  position: absolute;
+  bottom: 5vh;
+  left: 6vw;
+}
+
+.scroll_weekly_top  .text_s_d {
+  font-family: 'AdelleLight', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  padding-left: 10px;
+  text-transform: uppercase;
+  color: $main_text_color;
+}
+
+.scroll_weekly_top  .icone_s_d { 
+  position: absolute;
+  left: -30px;
+  bottom: 44px;
+}
+
+.mouse {
+  position: absolute;
+  top: 0px;
+  width: 25px;
+  height: 45px;
+  border: 1px solid $main_text_color;
+  border-radius: 40px;
+}
+
+.mouse_button {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 1px;
+  height: 20px;
+  background-color: $main_text_color;
+}
+
+.mouse_roll {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: $main_text_color;
+  border-radius: 50%;
+  animation: roll 2s linear infinite alternate;
+}
+
+.next_top {
+  position: absolute;
+  top: 50%;
+  right: 5vw;
+  transform: translateY(-50%);
+  width: 65px;
+  height: 65px;
+  border: 3px solid $main_text_color;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.next_top span {
+  position: absolute;
+  left: -7px;
+  top: 57%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 35px;
+  color: $main_text_color;
+}
+
+.arrow {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: $main_text_color;
+  transform: rotate(35deg);
+}
+
+.arrow:after {
+  content:'';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: $main_text_color;
+  transform: rotate(-35deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
 
