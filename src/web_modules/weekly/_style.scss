@@ -22,7 +22,7 @@
 .stats_weekly_top {
   position: absolute;
   width: 65%;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -187,5 +187,47 @@
   background-color: rgba(34, 34, 34, 0.3)
 }
 
+.noise_weekly_top {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  text-transform: uppercase;
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 20px;
+  letter-spcing: 4px;
+  color: $main_text_color;
+}
 
+.noise_value {
+  position: absolute;
+  top: 30px;
+  left: -82px;
+  width: 140px;
+  height: 25px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: linear-gradient(to bottom, rgba(0,223,255,1) 0%,rgba(0,188,255,1) 100%);
+}
+
+.reality_value {
+  position: absolute;
+  top: 30px;
+  left: 2px;
+  width: 190px;
+  height: 25px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255,226,97,1) 0%,rgba(255,193,50,1) 100%);
+}
+
+.reality_weekly_top {
+  position: absolute;
+  top: 350px;
+  right: 340px;
+  text-transform: uppercase;
+  font-family: 'AdelleBold', sans-serif;
+  font-size: 20px;
+  letter-spcing: 4px;
+  color: $main_text_color;
+}
 
