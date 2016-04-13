@@ -4,6 +4,26 @@
     <div class="content_about"> 
       <h1>What is trurank ?</h1>
       <h2>Noise <span>+</span> Reality</h2>
+    </div>
+
+    <div class="content_explanation">
+      <div class="explanation_left">
+        <p>
+          Noise is the combination of every social signal linked to a movie. <br />
+          Comments, views and mentions were all retreived from : 
+        </p>
+      </div>
+
+      <div class="explanation_separator"></div>
+
+       <div class="explanation_right">
+        <p>
+          Reality combines every after the release of the movie <br />
+          We used the numbers of streams, seeders and tickets sales from :  
+        </p>
+      </div>
+    </div>
+ 
 </template>
 
 <script>

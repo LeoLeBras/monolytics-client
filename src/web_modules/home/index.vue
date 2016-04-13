@@ -12,10 +12,32 @@
       </div>
   </div>
 </div>
-<div class="content whatis">
-  <h2>what is trurank</h2>
-  <h3>Noise <span>+</span> Reality</h3>
-</div>
+<div class="col-md-12 text_home">
+   <div class="catch_text">
+     We rank up the latest popular movies
+     <br />
+     with our <span class="brand_rank">trurank</span> notation system
+   </div>
+ 
+   <div class="scroll_down">
+     <div class="text_s_d">
+       scroll down
+       <br />
+       to discover the tops
+     </div>
+ 
+     <div class="icone_s_d bounce">
+       <img src="../../assets/img/mouse.png" alt="scroll down to discover the tops">
+     </div>
+   </div>
+ 
+ 
+   <div class="col-md-12 twitter">
+     <h2>latest mentions</h2>
+     <div class="timeline_twitter">
+ 
+     </div>
+   </div>
 </template>
 
 <script>
