@@ -42,7 +42,9 @@
         </div>
 
         <div class="movie_weekly_top">
-          Star wars VII : The force awakens
+          <span>
+            Star wars VII  :  The force awakens
+          </span>
         </div>
 
         <div class="separator_stats"></div>
