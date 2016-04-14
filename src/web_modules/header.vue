@@ -33,7 +33,9 @@
 	}
 
 	.center {
+		position: relative;
 		text-align: center;
+		top: -5px;
 	}
 
 	.nav {
@@ -81,6 +83,7 @@
 
 	.logo {
 		position: absolute;
+		top: 25px;
 
 		img {
 			width: 150px;
