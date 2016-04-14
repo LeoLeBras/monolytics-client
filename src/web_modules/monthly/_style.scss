@@ -29,7 +29,8 @@
 
 .title_weekly_top {
   position: absolute;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -48,7 +49,8 @@
   position: absolute;
   top: 55px;
   left: 110px;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 225px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -71,7 +73,8 @@
   position: absolute;
   top: 210px;
   left: 80px;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -117,7 +120,8 @@
     position: relative;
     top: 90px;
     left: 80px;
-    font-family: 'AdelleBold', sans-serif;
+    font-family: 'Adelle', sans-serif;
+    font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -138,7 +142,8 @@
 .comments_weekly_top {
   position: absolute;
   right: 0;
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -149,7 +154,8 @@
 
 .number_comments {
   position: relative;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   top: 3px;
@@ -168,7 +174,8 @@
 .movie_weekly_top {
     margin: 0;
     padding: 0;
-    font-family: 'AdelleBold', sans-serif;
+    font-family: 'Adelle', sans-serif;
+    font-weight: 700;
     font-size: 30px;
     position: absolute;
     right: 20px;
@@ -192,7 +199,8 @@
   top: 350px;
   left: 350px;
   text-transform: uppercase;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: $main_text_color;
 }
@@ -224,7 +232,8 @@
   top: 350px;
   right: 325px;
   text-transform: uppercase;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: $main_text_color;
 }
@@ -236,7 +245,9 @@
 }
 
 .scroll_weekly_top  .text_s_d {
-  font-family: 'AdelleLight', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 100;
+  font-weight: 700;
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 20px;
@@ -298,7 +309,8 @@
   top: 57%;
   transform: translateY(-50%);
   text-transform: uppercase;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 35px;
   color: $main_text_color;
 }

@@ -12,7 +12,8 @@
 
 .content_about h1{
   text-transform: uppercase;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 40px;
   color: $main_text_color;
   letter-spacing: 4px;
@@ -28,7 +29,8 @@
 }
 
 .content_about h2 span {
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 50px;
 }
 
@@ -41,7 +43,8 @@
 }
 
 .explanation_left {
-  font-family: 'AdelleLight', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 100;
   font-size: 20px;
   line-height: 25px;
   position: relative;
@@ -66,7 +69,8 @@
 }
 
 .explanation_right {
-  font-family: 'AdelleLight', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 100;
   font-size: 20px;
   position: relative;
   line-height: 25px;
@@ -90,7 +94,8 @@
 }
 
 .warning_whatis p {
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 400;
   width: 60%;
   margin: 0 auto;
   text-align: center;

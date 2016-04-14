@@ -86,7 +86,8 @@ a:hover {
   padding: 0px 50px;}
 
 .logo {
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -117,19 +118,22 @@ a:hover {
 
 .whatis {
   text-align: center;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 .whatis a span span {
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 400;
 }
 
 .about {
   text-align: right;
-  font-family: 'AdelleBold', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;

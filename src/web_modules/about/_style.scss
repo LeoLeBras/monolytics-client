@@ -2,7 +2,8 @@
   position      : relative;
   text-align    : center;
   text-transform: uppercase;
-  font-family   : 'AdelleBold', sans-serif;
+  font-family   : 'Adelle', sans-serif;
+  font-weight: 700;
   font-size     : 38px;
   letter-spacing: 4px;
   margin-top    : 100px;  
@@ -18,7 +19,8 @@
   width         : auto;
   position      : relative;
   text-align    : center;
-  font-family   : 'AdelleBold', sans-serif;
+  font-family   : 'Adelle', sans-serif;
+  font-weight: 700;
   font-size     : 48px;
   margin-top    : 150px;  
   color         : $main_text_color;
@@ -67,13 +69,15 @@
 // General properties
 
 .name {
-  font-family: 'AdelleRegular', sans-serif;
+  font-family: 'Adelle', sans-serif;
+  font-weight: 400;
   font-size  : 17px;
   color      : #fff;
 }
 
 .role {
   font-family: 'Adelle', sans-serif;
+  font-weight: 700;
   font-size  : 17px;
   font-weight:  100;
   color      : #fff;
