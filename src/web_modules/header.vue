@@ -5,7 +5,7 @@
 		</a>
 		<nav class="nav">
 			<ul>
-				<li class="nav_item">
+				<li class="nav_item center">
 					<a v-link="'/whatis'" class="nav_link menu_link">
 						<span class="light">what is</span> trurank ?
 					</a>
@@ -30,6 +30,10 @@
 		padding: 20px 30px;
 		width: 100%;
 		z-index: 10;
+	}
+
+	.center {
+		text-align: center;
 	}
 
 	.nav {
