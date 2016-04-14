@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <div class="container">
+  <div>
     <movie-video></movie-video>
     <div class="wrapper">
 
@@ -15,6 +15,7 @@
           0{{ $route.params.rank }}
         </div>
 
+        <data></data>
         <stats></stats>
 
 
@@ -23,7 +24,7 @@
           <div class="trurank_info">
             <span>
               Trurank <br />
-              445
+              {{ trurank }}
             </span>
           </div>
         </div>
@@ -32,30 +33,10 @@
             {{ title }}
           </span>
         </div>
-        <div class="separator_stats"></div>
-          <div class="noise_weekly_top">
-            <span>noise</span>
-            <span class="noise_value"></span>
-          </div>
-          <div class="reality_weekly_top">
-            <span>reality</span>
-            <span class="reality_value"></span>
-          </div>
-        </div>
       </div>
-      <scroll></scroll>
-        <div class="next_container" v-show="nextRank != 10">
-          <a v-link="{ path: '/tops/trending/' + nextRank }" class="next_link">
-            0{{ nextRank }}
-          </a>
-        </div>
-
-        <div class="prev_container" v-show="prevRank != 10">
-          <a v-link="{ path: '/tops/trending/' + prevRank }" class="prev_link">
-            0{{ prevRank }}
-          </a>
-        </div>
   </div>
+  <pagination></pagination>
+  <scroll></scroll>
 </template>
 
 <script>
@@ -67,6 +48,8 @@
   Vue.component('movie-video', require('./video'));
   Vue.component('scroll', require('./scroll'));
   Vue.component('stats', require('./stats'));
+  Vue.component('pagination', require('./pagination'));
+  Vue.component('data', require('./data'));
 
   export default {
 
@@ -75,15 +58,10 @@
      */
     data() {
       return {
-        nextRank: parseInt(this.$route.params.rank) + 1,
-        prevRank: parseInt(this.$route.params.rank) - 1,
         data: [],
-        title: ''
+        title: '',
+        trurank: 0
       };
-    },
-
-    ready() {
-
     },
 
     watch: {
@@ -123,6 +101,7 @@
           movie => movie.type == this.$route.params.category
         )[this.$route.params.rank];
         this.title = movie['title'];
+        this.trurank = parseInt(movie['trurank_score']);
         this.$broadcast('setMovie', movie)
       },
 
@@ -148,5 +127,15 @@
 
   @import "../theme";
   @import "./style";
+
+  .wrapper {
+      position: absolute;
+      width: 1200px;
+      height: 50vw;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      margin: 0 auto;
+  }
 
 </style>

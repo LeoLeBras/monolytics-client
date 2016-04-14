@@ -1,12 +1,12 @@
 <template>
-  <div class="container" transition="video">
+  <div class="container">
     <div class="video">
-      <iframe
-        frameborder="0"
-        height="100%"
-        width="100%"
-        v-bind:src="src">
-      </iframe>
+      <div
+        class="iframe"
+        style="width:100%;height:100%"
+        v-youtube="youtube_id"
+        :player-vars="{autoplay:1,controls:0,mute:1,showinfo:0,autohide:1,loop:1,enablejsapi:1}">
+      </div>
     </div>
     <div class="overlay"></div>
   </div>
@@ -14,17 +14,27 @@
 
 <script>
 
+  import Vue from 'vue';
+  import VueYouTubeEmbed, { events } from 'vue-youtube-embed';
+  Vue.use(VueYouTubeEmbed);
+
   export default {
 
     data() {
       return {
-        src: ''
+        youtube_id: 'LoebZZ8K5N0'
       };
     },
 
+    // Set movie
     events: {
+      [events.READY]: function(player) {
+        if(player) {
+          player.mute();
+        }
+      },
       setMovie(movie) {
-        this.src = 'https://youtube.com/embed/' + movie['youtube_id'] + '?loop=1&autoplay=1&controls=0&mute=1&showinfo=0&autohide=1&playlist=tw-q-hG0owc'
+        this.youtube_id = movie['youtube_id'];
       }
     }
 
@@ -32,20 +42,24 @@
 
 </script>
 
-<style scoped>
+<style lang="sass" scoped>
 
   .video {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    transform: scale(1.5);
+    transform: scale(1.75);
     pointer-events: none;
   }
 
+  .iframe {
+    width: 100%;
+    height: 100%;
+  }
   .overlay {
     background: #8b4fff;
     background: linear-gradient(to top right, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
-    opacity: 0.6;
+    opacity: 0.75;
     width: 100vw;
     height: 100vh;
     position: absolute;

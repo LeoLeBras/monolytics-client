@@ -3,43 +3,52 @@
     <span class="numbers_quotes">
       <span class="number_comments number_comments_1">{{ pirate_bay_seeders }}<span><br>Pirate Bay seeders</span></span>
       <span class="number_comments number_comments_2">{{ trakt_plays }}<span><br>Trakt plays</span></span>
-      <span class="number_comments number_comments_3">{{ trakt_plays }}<span><br>Revenues</span></span>
-      <span class="number_comments number_comments_4">{{ trakt_plays }}<span><br>Metascore</span></span>
-      <span class="number_comments number_comments_5">{{ trakt_plays }}<span><br>Tomatometer</span></span>
-      <span class="number_comments number_comments_6">{{ trakt_plays }}<span><br>Youtube Trailers Views</span></span>
-      <span class="number_comments number_comments_7">{{ trakt_plays }}<span><br>Youtube Comments</span></span>
-      <span class="number_comments number_comments_8">{{ trakt_plays }}<span><br>IMDB Rating </span></span>
-      <span class="number_comments number_comments_9">ALl Stats<span><br>See all our stats</span></span>
+      <span class="number_comments number_comments_3">{{ revenue }}<span><br>Revenues</span></span>
+      <span class="number_comments number_comments_4">{{ metascore }}<span><br>Metascore</span></span>
+      <span class="number_comments number_comments_5">{{ rotten_tomatoes_meter }}<span><br>Tomatometer</span></span>
+      <span class="number_comments number_comments_6">{{ youtube_view_count }}<span><br>Youtube Trailers Views</span></span>
+      <span class="number_comments number_comments_7">{{ youtube_comment_count }}<span><br>Youtube Comments</span></span>
+      <span class="number_comments number_comments_8">{{ imdb_rating }}<span><br>IMDB Rating </span></span>
+      <span class="number_comments number_comments_9">All Stats<span><br>See all our stats</span></span>
     </span>
   </div>
 </template>
 
 <script>
-	
+
   export default {
 
     data() {
       return {
         trakt_plays: 0,
-        pirate_bay_seeders: 0
+        pirate_bay_seeders: 0,
+        revenue: 0,
+        metascore: 0,
+        rotten_tomatoes_meter: 0,
+        youtube_view_count: 0,
+        youtube_comment_count: 0,
+        imdb_rating: 0
       };
     },
 
     events: {
       setMovie(movie) {
-        this.pirate_bay_seeders = movie.pirate_bay_seeders;
-        this.trakt_plays = movie.trakt_plays;
+        this.pirate_bay_seeders = movie.pirate_bay_seeders || 0;
+        this.trakt_plays = movie.trakt_plays || 0;
+        this.revenue = movie.revenue || 0;
+        this.metascore = movie.metascore || 0;
+        this.rotten_tomatoes_meter = movie.rotten_tomatoes_meter || 0;
+        this.youtube_view_count = movie.youtube_view_count || 0;
+        this.youtube_comment_count = movie.youtube_comment_count || 0;
+        this.imdb_rating = movie.imdb_rating || 0;
       }
     }
-
   }
-
-  
 
 </script>
 
 <style lang="sass" scoped>
-	
+
   @import "../theme";
 
   .comments_weekly_top {
@@ -54,12 +63,13 @@
     color: $main_text_color;
     height: 100px;
     width: 220px;
-    border-left: 1px solid $main_text_color; 
+    border-left: 1px solid $main_text_color;
     overflow: hidden;
   }
 
   .number_comments {
-    position: relative;
+    display: block;
+    position: absolute;
     font-family: 'AdelleBold', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
@@ -76,17 +86,12 @@
   }
 
   .number_comments_1 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-200px) translateY(0px);
     animation-fill-mode: forwards;
   }
 
    .number_comments_2 {
-    position:absolute;
-    display: block;
-    position:absolute;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 4s;
@@ -94,8 +99,6 @@
   }
 
    .number_comments_3 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 8s;
@@ -104,8 +107,6 @@
   }
 
    .number_comments_4 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 12s;
@@ -114,8 +115,6 @@
   }
 
    .number_comments_5 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 16s;
@@ -123,8 +122,6 @@
   }
 
    .number_comments_6 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 20s;
@@ -132,8 +129,6 @@
   }
 
    .number_comments_7 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 24s;
@@ -141,8 +136,6 @@
   }
 
    .number_comments_8 {
-    position:absolute;
-    display: block;
     animation: effect_comments 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 28s;
@@ -150,8 +143,6 @@
   }
 
   .number_comments_9 {
-    position:absolute;
-    display: block;
     animation: effect_comments_final 4s linear;
     transform: translateX(-300px) translateY(0px);
     animation-delay: 32s;
@@ -160,36 +151,33 @@
   }
 
   @keyframes effect_comments {
-  0% {
-    transform: translateX(-200px);
+    0% {
+      transform: translateX(-200px);
+    }
+    20% {
+      transform: translateX(0px);
+    }
+    80% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0px) translateY(200px) ;
+      opacity: 0;
+    }
   }
-  20% {
-    transform: translateX(0px);
-  }
-  80% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0px) translateY(200px) ;
-    opacity: 0;
-    
-  }
-}
 
   @keyframes effect_comments_final {
-  0% {
-    transform: translateX(-200px);
+    0% {
+      transform: translateX(-200px);
+    }
+    20% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
   }
-  20% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-
 
 </style>
