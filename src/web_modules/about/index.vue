@@ -5,7 +5,7 @@
 
   <div class="main_sentence">
     <p>We are...
-      <span class="dev animation-1">Developpers</span>
+      <span class="dev css-typing">Developpers</span>
       <span class="designer">Designers</span>
       <span class="leader">Leaders</span>
       <span class="data">Data scientists</span>
