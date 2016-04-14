@@ -1,194 +1,90 @@
 <template>
-	<div class="container header">
-	    <div class="gradient"></div>
-	      <div class="menu">
-	        <div class="col_4 logo">
-	          <a v-link="'/home'">
-	            <img src="../assets/img/logo.png" alt="Monlythics">
-	          </a>
-	        </div>
-	        <div class="col_4 whatis">
-	          <a v-link="'/whatis'">
-	            <span class="menu_link"><span>what is</span> trurank ?</span>
-	          </a>
-	        </div>
-	        <div class="col_4 about">
-	          <a v-link="'/about'">
-	            <span class="menu_link">about us</span>
-	          </a>
-	        </div>
-	      </div>
-	  </div>
+	<header class="container">
+		<a v-link="'/home'" class="logo">
+			<img src="../assets/img/logo.png" alt="Monlythics">
+		</a>
+		<nav class="nav">
+			<ul>
+				<li class="nav_item">
+					<a v-link="'/whatis'" class="nav_link menu_link">
+						<span class="light">what is</span> trurank ?
+					</a>
+				</li>
+				<li class="nav_item">
+					<a v-link="'/about'" class="nav_link menu_link">
+						about us
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 </template>
-
-<script>
-
-  import Vue from 'vue';
-  import dynamics from 'dynamics.js';
-
-  
-
-
-  export default {
-    // ...
-  }
-
-</script>
 
 <style lang="sass" scoped>
 
   @import "./theme";
 
+	.container {
+		position: absolute;
+		padding: 20px 30px;
+		width: 100%;
+		z-index: 10;
+	}
 
-  
-  body {
-  color: $main_text_color;
-}
+	.nav {
+		position: relative;
+		top: 5px;
+		text-align: right;
 
-a {
-  color: $main_text_color;
-  text-decoration: none;
-}
+		&_item {
+			display: inline-block;
+			width: 33%;
+		}
 
-a:hover {
-  color: $main_text_color;
-  text-decoration: none;
-}
+		&_link {
+		  display: inline-block;
+		  width: auto;
+		  position: relative;
+			color: $main_text_color;
+			text-decoration: none;
+			text-align: right;
+			font-family: 'Adelle', sans-serif;
+			font-weight: 700;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
 
-.col_4 {
-  width: 33%;
-  display: inline-block;
-}
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: -3px;
+				left: -2px;
+				background-color: #F1F1F1;
+				visibility: hidden;
+				transform: scaleX(0);
+				transition: all 0.3s ease-in-out 0s;
+			}
 
-.container {
-  width: 100vw;
-}
+			&:hover:before {
+			  visibility: visible;
+			  transform: scaleX(1);
+			}
+		}
+	}
 
-.menu {
-  position: relative;
-  margin-top: 30px;
-  z-index: 1;
-}
+	.logo {
+		position: absolute;
 
-.gradient {
-    height: 100vh;
-    width: 100vw;
-    background: #8b4fff;
-    background: -webkit-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
-    background: -o-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
-    background: linear-gradient(to top right, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+		img {
+			width: 150px;
+		}
+	}
 
-.header {
-  padding: 0px 50px;}
-
-.logo {
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.logo img {
-    width: 30%;
-    padding: 0px;
-    margin-left: 10px;
-    margin-top: 0px; 
-}
-
-.logo span{
-  margin-top: 30px;
-  font-size: 17px;
-  color: $main_text_color;
-  text-transform: uppercase;
-  }
-
-.logo a {
-  color: $main_text_color;
-}
-
-.logo a:hover {
-  color: $main_text_color;
-  text-decoration: none;
-}
-
-.whatis {
-  text-align: center;
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.whatis a span span {
-  font-family: 'Adelle', sans-serif;
-  font-weight: 400;
-}
-
-.about {
-  text-align: right;
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.menu_link {
-  display: inline-block;
-  width: auto;
-  position: relative;
-}
-
-.menu_link:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0px;
-  left: -2px;
-  background-color: #F1F1F1;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.menu_link:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-@media screen and (max-width: 920px) {
-    .col_4 {
-      display: block;
-      padding: 5px 0px;
-    }
-
-    .about {
-      text-align: left;
-    }
-
-    .whatis {
-      text-align: left;
-    }
-
-    .logo {
-      text-align: left;
-    }
-
-    .logo img {
-      margin-left: 0px;
-      width: 60%;
-    }
-
-  }
+	.light {
+		font-family: 'Adelle', sans-serif;
+		font-weight: 400;
+	}
 
 </style>
