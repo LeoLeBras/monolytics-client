@@ -18,7 +18,7 @@
        <br />
        with our <span class="brand_rank">trurank</span> notation system
      </div>
-     <div class="scroll_down">
+     <div class="scroll_down" v-on:click="goToTops">
        <div class="text_s_d">
          scroll down
          <br />
@@ -49,32 +49,22 @@
 
   import Vue from 'vue';
   import dynamics from 'dynamics.js';
-
   Vue.component('app-header', require('./../header'));
 
-  Vue.transition('slide', {
-     beforeLeave: () => { // beforeLeave: function() {
-       console.log('before leave');
-     },
-     leave: (el, done) => {
-       dynamics.animate(el, {
-         left: 0,
-         opacity: 0
-       }, {
-         type: dynamics.spring,
-         frequency: 200,
-         friction: 200,
-         duration: 1500,
-         complete: () => done()
-       });
-     },
-     afterLeave: () => {
-       console.log('after leave');
-     }
-   });
-
   export default {
-    // ...
+    ready() {
+      let timer;
+      window.addEventListener('mousewheel', (e) => {
+        if(e.deltaY > 2 || e.deltaX < 2) {
+          this.goToTops();
+        }
+      })
+    },
+    methods: {
+      goToTops() {
+         this.$route.router.go('/tops/trending/1');
+      }
+    }
   }
 
 </script>
@@ -83,7 +73,5 @@
 
   @import "../theme";
   @import "./style";
-
-
 
 </style>
