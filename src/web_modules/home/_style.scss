@@ -124,8 +124,6 @@ a:hover {
   transform: scaleX(1);
 }
 
-
-
 .video_container {
 z-index: -1;
 }
@@ -163,7 +161,7 @@ z-index: -1;
     top: 0;
     -webkit-mask: url("../../assets/img/effect.png");
     -webkit-mask-size: 3000% 100%;
-    -webkit-animation: mask-playzer 10s steps(29) infinite;
+    -webkit-animation: mask-playzero 10s steps(29) infinite;
     -webkit-animation-fill-mode: forwards; 
     animation-fill-mode: forwards;
 }
