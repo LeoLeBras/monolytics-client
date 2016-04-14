@@ -298,7 +298,7 @@ z-index: -1;
   overflow: hidden;
   padding: 0;
   transform: translate3D(0,0,0);
-  animation: hslide linear 5s infinite;
+  animation: hslide linear 13s infinite alternate;
 }
 
 .text-slide {
@@ -322,7 +322,7 @@ z-index: -1;
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-10%);
+    transform: translateX(-15%);
   }
 }
 

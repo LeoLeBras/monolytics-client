@@ -12,7 +12,7 @@
 				</li>
 				<li class="nav_item">
 					<a v-link="'/about'" class="nav_link menu_link">
-						about us
+						<i class="fa fa-github" aria-hidden="true"></i>
 					</a>
 				</li>
 			</ul>
