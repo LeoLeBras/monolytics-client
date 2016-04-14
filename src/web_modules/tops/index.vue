@@ -15,10 +15,8 @@
           0{{ $route.params.rank }}
         </div>
 
-        <div class="comments_weekly_top">
-          <span class="number_comments">7540</span><br>
-          Comments on IMDB
-        </div>
+        <stats></stats>
+
 
         <div class="trurank_weekly_top">
           <span class="good_stat"></span>
@@ -44,13 +42,19 @@
             <span class="reality_value"></span>
           </div>
         </div>
-        <scroll></scroll>
+      </div>
+      <scroll></scroll>
         <div class="next_container" v-show="nextRank != 10">
           <a v-link="{ path: '/tops/trending/' + nextRank }" class="next_link">
             0{{ nextRank }}
           </a>
         </div>
-      </div>
+
+        <div class="prev_container" v-show="prevRank != 10">
+          <a v-link="{ path: '/tops/trending/' + prevRank }" class="prev_link">
+            0{{ prevRank }}
+          </a>
+        </div>
   </div>
 </template>
 
@@ -62,6 +66,7 @@
   Vue.component('app-header', require('./../header'));
   Vue.component('movie-video', require('./video'));
   Vue.component('scroll', require('./scroll'));
+  Vue.component('stats', require('./stats'));
 
   export default {
 
@@ -71,6 +76,7 @@
     data() {
       return {
         nextRank: parseInt(this.$route.params.rank) + 1,
+        prevRank: parseInt(this.$route.params.rank) - 1,
         data: [],
         title: ''
       };
@@ -127,6 +133,9 @@
       setPagination() {
         if(this.nextRank < 10) {
           this.nextRank += 1;
+        }
+        if(this.prevRank > 0) {
+          this.prevRank += 1;
         }
       }
 
