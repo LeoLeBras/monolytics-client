@@ -29,18 +29,14 @@
 </template>
 
 <script>
-
   import Vue from 'vue';
   Vue.component('app-header', require('./../header'));
   Vue.component('title', require('./title'));
-
 </script>
 
 <style lang="sass" scoped>
-
   @import "../theme";
   @import "./style";
-
   .wrapper {
     position: absolute;
     top: 50%;
@@ -48,5 +44,4 @@
     transform: translate(-50%, -60%);
     width: 80%;
   }
-
 </style>
