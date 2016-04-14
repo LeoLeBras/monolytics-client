@@ -23,6 +23,9 @@ router.map({
   },
   '/monthly': {
     component: require('web_modules/monthly')
+  },
+  '/stats': {
+    component: require('web_modules/stats')
   }
 });
 router.redirect({
