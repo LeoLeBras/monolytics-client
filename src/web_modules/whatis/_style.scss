@@ -1,32 +1,4 @@
-.about {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 80%;
-}
 
-.content_about {
-  text-align: center;
-}
-
-.content_about h1{
-  text-transform: uppercase;
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: $main_text_color;
-  letter-spacing: 4px;
-  word-spacing: 5px;
-  padding-bottom: 25px;
-}
-
-.content_about h2 {
-  font-family: 'Nick', sans-serif;
-  font-size: 55px;
-  color: $main_text_color;
-  word-spacing: 12px;
-}
 
 .content_about h2 span {
   font-family: 'Adelle', sans-serif;
@@ -124,12 +96,12 @@
       text-align: center;
       padding-bottom: 30px;
     }
-    
+
     .explanation_left img {
       display: none;
     }
 
-    
+
     .explanation_right img {
       display: none;
     }

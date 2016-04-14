@@ -1,11 +1,7 @@
 <template>
   <app-header></app-header>
-  <div class="container about">
-    <div class="content_about"> 
-      <h1>What is trurank ?</h1>
-      <h2>Noise <span>+</span> Reality</h2>
-    </div>
-
+  <div class="wrapper">
+    <title></title>
     <div class="content_explanation">
       <div class="explanation_left">
         <p>
@@ -14,9 +10,7 @@
           <img src="../../assets/img/icon_left.png" alt="nos apis">
         </p>
       </div>
-
       <div class="explanation_separator"></div>
-
        <div class="explanation_right">
         <p>
           Reality combines every ways of viewing the movie after it’s release<br />
@@ -26,12 +20,10 @@
       </div>
     </div>
   </div>
-
   <div class="warning_whatis">
     <p>
       Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
     </p>
-
     <img src="../../assets/img/stop.png" alt="Warning">
   </div>
 </template>
@@ -39,34 +31,8 @@
 <script>
 
   import Vue from 'vue';
-  import dynamics from 'dynamics.js';
-
   Vue.component('app-header', require('./../header'));
-
-  Vue.transition('color', {
-    beforeLeave: () => { // beforeLeave: function() {
-      console.log('before leave');
-    },
-    leave: (el, done) => {
-      dynamics.animate(el, {
-        scale: 0,
-        opacity: 0
-      }, {
-        type: dynamics.spring,
-        frequency: 200,
-        friction: 200,
-        duration: 1500,
-        complete: () => done()
-      });
-    },
-    afterLeave: () => {
-      console.log('after leave');
-    }
-  });
-
-  export default {
-    // ...
-  }
+  Vue.component('title', require('./title'));
 
 </script>
 
@@ -74,15 +40,13 @@
 
   @import "../theme";
   @import "./style";
-  
 
-
-</style>
-
-</template>
-
-<style lang="sass" scoped>
-
-  @import "../theme";
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 80%;
+  }
 
 </style>
