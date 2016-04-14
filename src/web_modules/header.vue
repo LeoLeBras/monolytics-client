@@ -11,8 +11,8 @@
 					</a>
 				</li>
 				<li class="nav_item">
-					<a v-link="'/about'" class="nav_link menu_link">
-						<i class="fa fa-github" aria-hidden="true"></i>
+					<a href="https://github.com/LeoLeBras/monolytics-client" target="_blank" class="nav_link menu_link">
+						<i class="fa fa-2x fa-github" aria-hidden="true"></i>
 					</a>
 				</li>
 			</ul>
