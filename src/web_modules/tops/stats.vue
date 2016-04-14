@@ -1,15 +1,15 @@
 <template>
   <div class="comments_weekly_top">
     <span class="numbers_quotes">
-      <span class="number_comments number_comments_1">{{ pirate_bay_seeders }}<span><br>Pirate Bay seeders</span></span><br>
-      <span class="number_comments number_comments_2">{{ trakt_plays }}<span><br>Trakt plays</span></span><br>
-      <span class="number_comments number_comments_3">{{ trakt_plays }}<span><br>Revenues</span></span><br>
-      <span class="number_comments number_comments_4">{{ trakt_plays }}<span><br>Metascore</span></span><br>
-      <span class="number_comments number_comments_5">{{ trakt_plays }}<span><br>Tomatometer</span></span><br>
-      <span class="number_comments number_comments_6">{{ trakt_plays }}<span><br>Youtube Trailers Views</span></span><br>
-      <span class="number_comments number_comments_7">{{ trakt_plays }}<span><br>Youtube Comments</span></span><br>
-      <span class="number_comments number_comments_8">{{ trakt_plays }}<span><br>IMDB Rating </span></span><br>
-      <span class="number_comments number_comments_9">ALl Stats<span><br>See all our stats</span></span><br>
+      <span class="number_comments number_comments_1">{{ pirate_bay_seeders }}<span><br>Pirate Bay seeders</span></span>
+      <span class="number_comments number_comments_2">{{ trakt_plays }}<span><br>Trakt plays</span></span>
+      <span class="number_comments number_comments_3">{{ trakt_plays }}<span><br>Revenues</span></span>
+      <span class="number_comments number_comments_4">{{ trakt_plays }}<span><br>Metascore</span></span>
+      <span class="number_comments number_comments_5">{{ trakt_plays }}<span><br>Tomatometer</span></span>
+      <span class="number_comments number_comments_6">{{ trakt_plays }}<span><br>Youtube Trailers Views</span></span>
+      <span class="number_comments number_comments_7">{{ trakt_plays }}<span><br>Youtube Comments</span></span>
+      <span class="number_comments number_comments_8">{{ trakt_plays }}<span><br>IMDB Rating </span></span>
+      <span class="number_comments number_comments_9">ALl Stats<span><br>See all our stats</span></span>
     </span>
   </div>
 </template>
@@ -47,7 +47,7 @@
     right: 0;
     font-family: 'AdelleRegular', sans-serif;
     font-size: 12px;
-    line-height: 1.1;
+    line-height: 0.8;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 15px 20px;
@@ -63,7 +63,7 @@
     font-family: 'AdelleBold', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
-    top: 25px;
+    top: 35px;
   }
 
   .number_comments span {
