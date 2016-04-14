@@ -9,7 +9,7 @@ router.map({
   '/': {
     component: require('web_modules/home')
   },
-  '/tops': {
+  '/tops/:category/:rank': {
     component: require('web_modules/tops')
   },
   '/about': {
@@ -20,9 +20,6 @@ router.map({
   },
   '/rank': {
     component: require('web_modules/rank')
-  },
-  '/weekly': {
-    component: require('web_modules/weekly')
   },
   '/monthly': {
     component: require('web_modules/monthly')

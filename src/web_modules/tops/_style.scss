@@ -1,23 +1,4 @@
-.content_weekly_top {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.overlay_video_top {
-  background: #8b4fff;
-  background: -webkit-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
-  background: -o-linear-gradient(bottom left, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%);
-  background: linear-gradient(to top right, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  opacity: 0.6;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 .stats_weekly_top {
   position: absolute;
@@ -62,36 +43,9 @@
   top: 130px;
   left: 0px;
   height: 60px;
-  background-color: $grey;
+  background-color: rgba(white, .4);
   opacity: 0.5;
   z-index: -1;
-}
-
-.evo_weekly_top {
-  position: absolute;
-  top: 210px;
-  left: 80px;
-  font-family: 'AdelleBold', sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 30px;
-  padding: 10px 20px;
-  border-radius: 30px;
-  color: $red;
-  background-color: $white;
-  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
-}
-
-.evo_up_form {
-  position: relative;
-  top: -18px;
-  margin-right: 5px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid $red;
 }
 
 .trurank_weekly_top {
@@ -109,7 +63,7 @@
   background: #ff4997; /* Old browsers */
   background: -webkit-linear-gradient(#ff4997 0%, #ff235d 100%);
   background: -o-linear-gradient(#ff4997 0%, #ff235d 100%);
-  background: linear-gradient(#ff4997 0%, #ff235d 100%); 
+  background: linear-gradient(#ff4997 0%, #ff235d 100%);
   border-radius: 50%;
 }
 
@@ -140,6 +94,7 @@
   right: 0;
   font-family: 'AdelleRegular', sans-serif;
   font-size: 12px;
+  line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 15px 20px;
@@ -181,10 +136,10 @@
 }
 
 .movie_weekly_top span {
-  line-height: 40px;
+  line-height: 1.1;
   padding: 2px;
   vertical-align: baseline;
-  background-color: rgba(34, 34, 34, 0.3)
+  // background-color: rgba(34, 34, 34, 0.3)
 }
 
 .noise_weekly_top {
@@ -235,74 +190,47 @@
   left: 6vw;
 }
 
-.scroll_weekly_top  .text_s_d {
-  font-family: 'AdelleLight', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  line-height: 20px;
-  padding-left: 10px;
-  text-transform: uppercase;
-  color: $main_text_color;
-}
+/**
+ * Next button
+ */
 
-.scroll_weekly_top  .icone_s_d { 
-  position: absolute;
-  left: -30px;
-  bottom: 44px;
-}
+.next {
+  &_container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border: 3px solid $main_text_color;
+    border-radius: 50%;
+    overflow: hidden;
 
-.mouse {
-  position: absolute;
-  top: 0px;
-  width: 25px;
-  height: 45px;
-  border: 1px solid $main_text_color;
-  border-radius: 40px;
-}
+    &:after {
+      content: '>';
+      display: inline-block;
+      position: absolute;
+      top: 14px;
+      right: -6px;
+      text-transform: uppercase;
+      font-family: 'AdelleBold', sans-serif;
+      font-size: 35px;
+      color: $main_text_color;
+    }
+  }
 
-.mouse_button {
-  position: absolute;
-  top: 10px;
-  left: 12px;
-  width: 1px;
-  height: 20px;
-  background-color: $main_text_color;
+  &_link {
+    position: absolute;
+    top: 57%;
+    left: -6px;
+    transform: translateY(-50%);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'AdelleBold', sans-serif;
+    font-size: 35px;
+    color: $main_text_color;
+  }
 }
-
-.mouse_roll {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  width: 5px;
-  height: 5px;
-  background-color: $main_text_color;
-  border-radius: 50%;
-  animation: roll 2s linear infinite alternate;
-}
-
-.next_top {
-  position: absolute;
-  top: 50%;
-  right: 5vw;
-  transform: translateY(-50%);
-  width: 65px;
-  height: 65px;
-  border: 3px solid $main_text_color;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.next_top span {
-  position: absolute;
-  left: -7px;
-  top: 57%;
-  transform: translateY(-50%);
-  text-transform: uppercase;
-  font-family: 'AdelleBold', sans-serif;
-  font-size: 35px;
-  color: $main_text_color;
-}
-
 
 @keyframes roll {
   0% {
@@ -312,4 +240,3 @@
     transform: translateY(10px);
   }
 }
-
