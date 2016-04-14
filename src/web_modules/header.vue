@@ -26,6 +26,7 @@
 
 	.container {
 		position: absolute;
+		top: 0;
 		padding: 20px 30px;
 		width: 100%;
 		z-index: 10;
