@@ -50,7 +50,7 @@
 	}
 
 	body {
-		overflow: hidden;
+		overflow: visible;
     min-height: 100vh;
     background: #8b4fff;
     background: linear-gradient(to top right, #8b4fff 0%, #ee46ab 41%, #ffcb72 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */

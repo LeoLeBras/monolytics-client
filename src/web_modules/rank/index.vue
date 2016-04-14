@@ -1,39 +1,83 @@
 <template>
   <app-header></app-header>
-  <div class="container about">
-    <div class="content_about"> 
-      <h1>What is trurank ?</h1>
-      <h2>Noise <span>+</span> Reality</h2>
-    </div>
-
-    <div class="content_explanation">
-      <div class="explanation_left">
-        <p>
-          Noise is the combination of every social signal linked to a movie <br />
-          Comments, views and mentions were all retreived from few apis<br />
-          <img src="../../assets/img/icon_left.png" alt="nos apis">
-        </p>
-      </div>
-
-      <div class="explanation_separator"></div>
-
-       <div class="explanation_right">
-        <p>
-          Reality combines every after the release of the movie <br />
-          We used the numbers of streams, seeders and tickets sales from few apis 
-          <img src="../../assets/img/icon_right.png" alt="nos apis">
-        </p>
-      </div>
-    </div>
+  <div class="container top">
+      <h1 class="title">Tops seeds</h1>
+  </div>
+  
+  <!--- Listes seeds -->
+    <!-- Parameters -->
+  <div class="parameters">
+    <span>Seeds</span>
+    <span>Leechers</span>
   </div>
 
-  <div class="warning_whatis">
-    <p>
-      Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
-    </p>
+    <!-- main liste -->
+  <ul class="main_liste">
+    <div class="separator_1"></div>
+    <div class="separator_2"></div>
+    <li class="number number_1">
+      <span>1.</span>
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1344</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_2">
+      <span>2.</span>
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1156</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_3">
+      <span>3.</span>
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1067</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_4">
+      <span>4.</span>
+      <span class="movie">Deadpool</span>
+      <span class="seeds">987</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_5">
+      <span>5.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">916</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_6">
+      <span>6.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">856</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_7">
+      <span>7.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">824</span>
+      <span class="leech">1344</span>
+    </li>
+    <li class="number number_8">
+      <span>8.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1344</span>
+      <span class="leech">1344</span>
 
-    <img src="../../assets/img/stop.png" alt="Warning">
-  </div>
+    </li>
+    <li class="number number_9">
+      <span>9.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1344</span>
+      <span class="leech">1344</span>
+      <span class="rate">
+    </li>
+    <li class="number number_10">
+      <span>10.</span> 
+      <span class="movie">Deadpool</span>
+      <span class="seeds">1344</span>
+      <span class="leech">1344</span>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -43,26 +87,9 @@
 
   Vue.component('app-header', require('./../header'));
 
-  Vue.transition('color', {
-    beforeLeave: () => { // beforeLeave: function() {
-      console.log('before leave');
-    },
-    leave: (el, done) => {
-      dynamics.animate(el, {
-        scale: 0,
-        opacity: 0
-      }, {
-        type: dynamics.spring,
-        frequency: 200,
-        friction: 200,
-        duration: 1500,
-        complete: () => done()
-      });
-    },
-    afterLeave: () => {
-      console.log('after leave');
-    }
-  });
+
+  
+
 
   export default {
     // ...
@@ -74,15 +101,5 @@
 
   @import "../theme";
   @import "./style";
-  
-
-
-</style>
-
-</template>
-
-<style lang="sass" scoped>
-
-  @import "../theme";
 
 </style>
