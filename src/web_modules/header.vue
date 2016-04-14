@@ -84,6 +84,7 @@
 	.logo {
 		position: absolute;
 		top: 25px;
+		z-index: 1;
 
 		img {
 			width: 150px;
