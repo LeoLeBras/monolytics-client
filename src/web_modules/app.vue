@@ -73,7 +73,11 @@
 	}
 
 	body {
+<<<<<<< HEAD
     overflow-y: auto;
+=======
+    overflow-y: visible;
+>>>>>>> origin/master
     overflow-x: hidden;
     min-height: 100vh;
     background: #8b4fff;
