@@ -57,6 +57,7 @@
      */
     data() {
       return {
+        title: '',
         data: null,
         deltaY: []
       };
