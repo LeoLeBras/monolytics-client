@@ -1,11 +1,11 @@
 <template>
   <div>
-    <a v-link="{ path: '/tops/trending/' + prevRank }" class="item i-prev" v-show="prevRank > 0">
+    <a v-link="{ path: '/tops/' + $route.params.category + '/' + prevRank }" class="item i-prev" v-show="prevRank > 0">
       <span class="link i-prev">
         0{{ prevRank }}
       </span>
     </a>
-    <a v-link="{ path: '/tops/trending/' + nextRank }" class="item i-next" v-show="nextRank < 10">
+    <a v-link="{ path: '/tops/' + $route.params.category + '/' + nextRank }" class="item i-next" v-show="nextRank < 10">
       <span class="link i-next">
         0{{ nextRank }}
       </span>

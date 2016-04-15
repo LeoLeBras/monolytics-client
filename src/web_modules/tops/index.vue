@@ -2,8 +2,8 @@
   <app-header></app-header>
   <div>
     <movie-video></movie-video>
+    <alldata></alldata>
     <div class="wrapper">
-
       <div class="stats_weekly_top">
         <div class="title_weekly_top">
           <span>
@@ -14,11 +14,8 @@
         <div class="number_weekly_top">
           0{{ $route.params.rank }}
         </div>
-
         <data></data>
         <stats></stats>
-
-
         <div class="trurank_weekly_top">
           <span class="good_stat"></span>
           <div class="trurank_info">
@@ -42,7 +39,6 @@
 <script>
 
   import Vue from 'vue';
-  import dynamics from 'dynamics.js';
 
   Vue.component('app-header', require('./../header'));
   Vue.component('movie-video', require('./video'));
@@ -50,6 +46,7 @@
   Vue.component('stats', require('./stats'));
   Vue.component('pagination', require('./pagination'));
   Vue.component('data', require('./data'));
+  Vue.component('alldata', require('./alldata'));
 
   export default {
 
@@ -60,9 +57,47 @@
       return {
         data: [],
         title: '',
-        trurank: 0
+        trurank: 0,
+        deltaY: [],
+        direction: null
       };
     },
+
+
+
+    /**
+     * Watch scroll event
+     */
+    ready() {
+      const categories = ['trending', 'popular', 'anticipated', 'boxoffice'];
+      let timer, direction;
+
+      // Detect scroll
+      window.addEventListener('mousewheel', (e) => {
+        this.deltaY.push(e.deltaY);
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          const currentCategoryIndex = categories.indexOf(this.$route.params.category);
+          const lastDeltaY = this.deltaY[(this.deltaY.length - 8)];
+          let categoryIndex = currentCategoryIndex ;
+
+          // Test direction
+          if(lastDeltaY > 0 && currentCategoryIndex < categories.length) { // bottom
+            categoryIndex += 1;
+          }
+          else if(lastDeltaY < 0 && currentCategoryIndex > 0) { // top
+            categoryIndex -= 1;
+          }
+
+          // Redirect
+          this.$route.router.go(`/tops/${categories[categoryIndex]}/1`);
+          this.deltaY = [];
+
+        }, 50);
+      });
+    },
+
+
 
     watch: {
 
@@ -87,6 +122,14 @@
       getData(value) {
         this.data = value;
         this.setMovie();
+      },
+
+
+      /**
+       * Open data box
+       */
+      onOpen() {
+        this.$broadcast('onOpen', true);
       }
 
     },
@@ -99,8 +142,10 @@
       setMovie() {
         const movie = this.data.filter(
           movie => movie.type == this.$route.params.category
+        ).sort(
+          (movieA, movieB) => movieB.trurank_score - movieA.trurank_score
         )[this.$route.params.rank];
-        this.title = movie['title'];
+        this.title = movie['title'] || '';
         this.trurank = parseInt(movie['trurank_score']);
         this.$broadcast('setMovie', movie)
       },

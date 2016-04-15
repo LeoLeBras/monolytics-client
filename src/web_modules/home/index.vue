@@ -31,17 +31,6 @@
        </div>
      </div>
    </div>
-   <!-- <div class="col-md-12 twitter_slide">
-     <div class="timeline_twitter">
-        <ul class="text-slider">
-         <li class="text-slide"><a href="">#NW deadpool, see what all that fuzz is about...</a></li>
-         <li class="text-slide"><a href="">#NW Zootopia with the kids !</a></li>
-         <li class="text-slide"><a href="">#NW BatmanvsSuperman, what a load of crap.</a></li>
-         <li class="text-slide"><a href="">#NW Thebookofthejungle, all my childhood :'-)</a></li>
-         <li class="text-slide"><a href="">#NW Rio with GF</a></li>
-      </ul>
-     </div>
-   </div> -->
   </div>
 </template>
 
@@ -58,7 +47,7 @@
         if(e.deltaY > 2 || e.deltaX < 2) {
           this.goToTops();
         }
-      })
+      });
     },
     methods: {
       goToTops() {

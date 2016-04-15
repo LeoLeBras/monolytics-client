@@ -34,7 +34,6 @@
     "vue-loader": "^8.0.3",
     "vue-router": "^0.7.11",
     "vue-style-loader": "^1.0.0",
-    "vue-youtube-embed": "^0.3.3",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1",
     "webpack-path-rewriter": "^1.1.3"

@@ -1,15 +1,14 @@
 <template>
-  <div class="comments_weekly_top">
+  <div class="comments_weekly_top" v-on:click="onOpen">
     <span class="numbers_quotes">
       <span class="number_comments number_comments_1">{{ pirate_bay_seeders }}<span><br>Pirate Bay seeders</span></span>
       <span class="number_comments number_comments_2">{{ trakt_plays }}<span><br>Trakt plays</span></span>
-      <span class="number_comments number_comments_3">{{ revenue }}<span><br>Revenues</span></span>
-      <span class="number_comments number_comments_4">{{ metascore }}<span><br>Metascore</span></span>
-      <span class="number_comments number_comments_5">{{ rotten_tomatoes_meter }}<span><br>Tomatometer</span></span>
-      <span class="number_comments number_comments_6">{{ youtube_view_count }}<span><br>Youtube Trailers Views</span></span>
-      <span class="number_comments number_comments_7">{{ youtube_comment_count }}<span><br>Youtube Comments</span></span>
-      <span class="number_comments number_comments_8">{{ imdb_rating }}<span><br>IMDB Rating </span></span>
-      <span class="number_comments number_comments_9">All Stats<span><br>See all our stats</span></span>
+      <span class="number_comments number_comments_3">{{ metascore }}<span><br>Metascore</span></span>
+      <span class="number_comments number_comments_4">{{ rotten_tomatoes_meter }}%<span><br>Tomatometer</span></span>
+      <span class="number_comments number_comments_5">{{ youtube_view_count }}<span><br>Youtube Trailers Views</span></span>
+      <span class="number_comments number_comments_6">{{ youtube_comment_count }}<span><br>Youtube Comments</span></span>
+      <span class="number_comments number_comments_7">{{ imdb_rating }}<span><br>IMDB Rating </span></span>
+      <span class="number_comments number_comments_8">All Stats<span><br>See all our stats</span></span>
     </span>
   </div>
 </template>
@@ -31,11 +30,18 @@
       };
     },
 
+    methods: {
+      onOpen() {
+        console.log('yolo, step 1.');
+        this.$dispatch('onOpen', true);
+      }
+    },
+
     events: {
       setMovie(movie) {
         this.pirate_bay_seeders = movie.pirate_bay_seeders || 0;
         this.trakt_plays = movie.trakt_plays || 0;
-        this.revenue = movie.revenue || 0;
+        this.revenue = movie.revenue || '?';
         this.metascore = movie.metascore || 0;
         this.rotten_tomatoes_meter = movie.rotten_tomatoes_meter || 0;
         this.youtube_view_count = movie.youtube_view_count || 0;
@@ -65,6 +71,7 @@
     width: 220px;
     border-left: 1px solid $main_text_color;
     overflow: hidden;
+    cursor: pointer;
   }
 
   .number_comments {
@@ -135,17 +142,10 @@
     opacity: 1;
   }
 
-   .number_comments_8 {
-    animation: effect_comments 4s linear;
-    transform: translateX(-300px) translateY(0px);
-    animation-delay: 28s;
-    opacity: 1;
-  }
-
-  .number_comments_9 {
+  .number_comments_8 {
     animation: effect_comments_final 4s linear;
     transform: translateX(-300px) translateY(0px);
-    animation-delay: 32s;
+    animation-delay: 28s;
     opacity: 1;
     animation-fill-mode: forwards
   }

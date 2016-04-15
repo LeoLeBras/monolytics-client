@@ -2,7 +2,7 @@
   <div class="container">
     <div class="text">
       scroll for
-      monthly top
+      an other top
     </div>
     <div class="icon">
       <div class="mouse"></div>

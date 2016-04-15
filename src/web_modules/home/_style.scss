@@ -11,87 +11,8 @@
   padding: 0px 50px;
 }
 
-.logo {
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.logo img {
-  width: 6%;
-  padding: 0px;
-  margin-left:10px;
-  margin-top: -8px;
-}
-
-.logo span{
-  margin-top: 30px;
-  font-size: 17px;
-  color: $main_text_color;
-  text-transform: uppercase;
-  }
-
-.logo a {
-  color: $main_text_color;
-}
-
-.logo a:hover {
-  color: $main_text_color;
-  text-decoration: none;
-}
-
-.whatis {
-  text-align: center;
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.whatis a span span {
-  font-family: 'Adelle', sans-serif;
-  font-weight: 400;
-
-}
-
-.about {
-  text-align: right;
-  font-family: 'Adelle', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.menu_link {
-  display: inline-block;
-  width: auto;
-  position: relative;
-}
-
-.menu_link:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0px;
-  left: -2px;
-  background-color: #F1F1F1;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.menu_link:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
 .video_container {
-z-index: -1;
+  z-index: -1;
 }
 
 .video_mask {
