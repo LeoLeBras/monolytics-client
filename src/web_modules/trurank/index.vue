@@ -36,14 +36,23 @@
     // Wait data ...
     ready() {
       if(this.fetchedtopmovies != null) {
-        this.data = this.fetchedtopmovies;
+        this.getData(this.fetchedtopmovies);
       }
     },
 
-    // And fetch data ! =)
+    // ... fetch data
     events: {
       getTrurankTopMovies(value) {
-        this.data = value;
+        this.getData(value);
+      }
+    },
+
+    // ... and sort them ! =)
+    methods: {
+      getData(value) {
+        this.data = value.sort(
+          (movieA, movieB) => movieB.trurank_score - movieA.trurank_score
+        );
       }
     }
 
