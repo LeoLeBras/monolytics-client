@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <div transition="expand">
+  <div v-el:container>
     <movie-video></movie-video>
     <alldata></alldata>
     <div class="wrapper">
@@ -87,7 +87,7 @@
       let timer, direction;
 
       // Detect scroll
-      window.addEventListener('mousewheel', (e) => {
+      this.$els.container.addEventListener('mousewheel', (e) => {
         this.deltaY.push(e.deltaY);
         clearTimeout(timer);
         timer = setTimeout(() => {

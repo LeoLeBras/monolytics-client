@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <div class="home_part">
+  <div class="home_part" v-el:container>
     <div class="video_container">
     <div class="video_mask">
       <div id="video_effect"></div>
@@ -42,7 +42,7 @@
   export default {
     ready() {
       let timer;
-      window.addEventListener('mousewheel', (e) => {
+      this.$els.container.addEventListener('mousewheel', (e) => {
         if(e.deltaY > 2 || e.deltaX < 2) {
           this.goToTops();
         }
