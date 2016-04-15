@@ -52,7 +52,7 @@
       getData(value) {
         this.data = value.sort(
           (movieA, movieB) => movieB.trurank_score - movieA.trurank_score
-        );
+        ).slice(0,10);
       }
     }
 
