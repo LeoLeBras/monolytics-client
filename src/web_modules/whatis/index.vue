@@ -24,7 +24,7 @@
     <p>
       Altogether they create a perfect alternative to the boring BoxOffice numbers, much more representative of the influence of a film piece
     </p>
-    <img src="../../assets/img/stop.png" alt="Warning">
+    <img src="../../assets/img/stop.png" alt="Warning" class="warning">
   </div>
 </template>
 

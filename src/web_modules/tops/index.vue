@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <div>
+  <div transition="expand">
     <movie-video></movie-video>
     <alldata></alldata>
     <div class="wrapper">
@@ -50,12 +50,14 @@
 
   export default {
 
+     props: ['fetcheddata'],
+
     /**
      * Set default data
      */
     data() {
       return {
-        data: [],
+        data: null,
         title: '',
         trurank: 0,
         deltaY: [],
@@ -65,10 +67,22 @@
 
 
 
-    /**
-     * Watch scroll event
-     */
     ready() {
+
+      /**
+       * Get data
+       */
+      if(this.fetcheddata !== null) {
+        this.data = this.fetcheddata;
+        this.setMovie();
+      }
+
+
+
+      /**
+      * Watch scroll event
+      */
+
       const categories = ['trending', 'popular', 'anticipated', 'boxoffice'];
       let timer, direction;
 

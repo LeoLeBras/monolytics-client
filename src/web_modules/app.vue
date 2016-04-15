@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <router-view v-bind:fetcheddata="data"></router-view>
 </template>
 
 <script>
@@ -8,10 +8,18 @@
   import fetch from 'helpers/fetch';
 
   export default {
+    data() {
+      return {
+        data: null
+      }
+    },
     ready() {
       fetch(api + 'tops')
         .then(response => JSON.parse(response))
-        .then(response => this.$broadcast('getData', response));
+        .then(response => {
+          this.data = response;
+          this.$broadcast('getData', response)
+        });
     }
   }
 
