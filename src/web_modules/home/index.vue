@@ -6,7 +6,7 @@
       <div id="video_effect"></div>
         <div id="video_trailers">
           <video class="video" autoplay loop>
-              <source src="../src/assets/medias/trailers/movies.webm" type="video/webm">
+            <source src="http://monolytics.io/movies.webm" type="video/webm">
             Your browser does not support HTML5 video.
           </video>
         </div>
@@ -20,8 +20,7 @@
      </div>
      <div class="scroll_down" v-on:click="goToTops">
        <div class="text_s_d">
-         scroll down
-         <br />
+         Scroll down<br>
          to discover the tops
        </div>
        <div class="icone_s_d">
