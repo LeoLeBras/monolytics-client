@@ -82,9 +82,12 @@
 }
 
 .movie {
+  display: inline-block;
   position: relative;
   height: 80px;
   line-height: 80px;
+  width: 650px !important;
+  text-align: left !important;
 }
 
 .number {
@@ -98,7 +101,7 @@
   text-align: center;
 }
 
-.seeds {
+.noise {
   position: absolute;
   right: 163px;
   width: 163px !important;
@@ -107,7 +110,7 @@
   font-size: 16px;
 }
 
-.leech {
+.reality {
   position: absolute;
   width: 163px !important;
   line-height: 80px;
@@ -181,4 +184,9 @@
 .number_10 {
   background-color: #F99F91;
   height: 80px;
+}
+
+.light {
+  opacity: .75;
+  font-size: 14px;
 }

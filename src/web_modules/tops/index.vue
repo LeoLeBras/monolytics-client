@@ -1,6 +1,6 @@
 <template>
   <app-header></app-header>
-  <div v-el:container>
+  <div v-el:container style="position:absolute;width:100%;height:100%">
     <movie-video></movie-video>
     <alldata></alldata>
     <div class="wrapper">
@@ -50,7 +50,7 @@
 
   export default {
 
-     props: ['fetcheddata'],
+    props: ['fetchedtopmovies'],
 
     /**
      * Set default data
@@ -58,10 +58,7 @@
     data() {
       return {
         data: null,
-        title: '',
-        trurank: 0,
-        deltaY: [],
-        direction: null
+        deltaY: []
       };
     },
 
@@ -72,11 +69,10 @@
       /**
        * Get data
        */
-      if(this.fetcheddata !== null) {
-        this.data = this.fetcheddata;
+      if(this.fetchedtopmovies != null) {
+        this.data = this.fetchedtopmovies;
         this.setMovie();
       }
-
 
 
       /**
@@ -96,16 +92,23 @@
           let categoryIndex = currentCategoryIndex ;
 
           // Test direction
-          if(lastDeltaY > 0 && currentCategoryIndex < categories.length) { // bottom
-            categoryIndex += 1;
+          if(lastDeltaY > 0) {
+            if(currentCategoryIndex < categories.length - 1) { // bottom
+              categoryIndex += 1;
+            } else {
+              this.$route.router.go(`/trurank`);
+              return;
+            }
           }
           else if(lastDeltaY < 0 && currentCategoryIndex > 0) { // top
             categoryIndex -= 1;
           }
 
           // Redirect
-          this.$route.router.go(`/tops/${categories[categoryIndex]}/1`);
-          this.deltaY = [];
+          if(categoryIndex) {
+            this.$route.router.go(`/tops/${categories[categoryIndex]}/1`);
+            this.deltaY = [];
+          }
 
         }, 50);
       });
@@ -133,7 +136,7 @@
       /**
        * Fetch data from api
        */
-      getData(value) {
+      getTopMovies(value) {
         this.data = value;
         this.setMovie();
       },
@@ -178,6 +181,7 @@
       }
 
     }
+
   }
 
 </script>

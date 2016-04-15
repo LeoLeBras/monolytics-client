@@ -1,5 +1,8 @@
 <template>
-  <router-view v-bind:fetcheddata="data"></router-view>
+  <router-view
+    v-bind:fetchedtopmovies="fetchedtopmovies"
+    v-bind:fetchedtruranktopmovies="fetchedtruranktopmovies"
+  ></router-view>
 </template>
 
 <script>
@@ -10,16 +13,28 @@
   export default {
     data() {
       return {
-        data: null
+        fetchedtopmovies: null,
+        fetchedtruranktopmovies: null
       }
     },
     ready() {
+
+      // Fetch tops list
       fetch(api + 'tops')
         .then(response => JSON.parse(response))
         .then(response => {
-          this.data = response;
-          this.$broadcast('getData', response)
+          this.fetchedtopmovies = response;
+          this.$broadcast('getTopMovies', response)
         });
+
+      // Fetch top trurank movies
+      fetch(api + 'topstrurank')
+        .then(response => JSON.parse(response))
+        .then(response => {
+          this.fetchedtruranktopmovies = response;
+          this.$broadcast('getTrurankTopMovies', response)
+        });
+
     }
   }
 
