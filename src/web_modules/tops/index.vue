@@ -59,6 +59,7 @@
       return {
         title: '',
         data: null,
+        trurank: 0,
         deltaY: []
       };
     },
