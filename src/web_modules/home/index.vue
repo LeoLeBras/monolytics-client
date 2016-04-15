@@ -6,7 +6,7 @@
       <div id="video_effect"></div>
         <div id="video_trailers">
           <video class="video" autoplay loop>
-            <source src="http://monolytics.io/movies.webm" type="video/webm">
+            <source src="http://www.monolytics.io/movies.webm" type="video/webm">
             Your browser does not support HTML5 video.
           </video>
         </div>
