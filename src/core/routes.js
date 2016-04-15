@@ -18,8 +18,8 @@ router.map({
   '/whatis': {
     component: require('web_modules/whatis')
   },
-  '/rank': {
-    component: require('web_modules/rank')
+  '/trurank': {
+    component: require('web_modules/trurank')
   }
 });
 router.redirect({

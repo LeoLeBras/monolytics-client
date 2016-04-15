@@ -32,7 +32,6 @@
 
     methods: {
       onOpen() {
-        console.log('yolo, step 1.');
         this.$dispatch('onOpen', true);
       }
     },
